@@ -5,25 +5,45 @@
     font-family: sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.background-video {
-    position: fixed;
+.background-image{
+    background-image: url('/Team Portfolio Website/pics/Background_image.png');
+     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* This basically pushes the video behind the content */
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 15%;
+    margin-right: 2%;
 }
 
 header {
     border-bottom: black solid 0px;
     /*background-color: #322E23;*/
+    z-index: 50;
+    max-width: 100vw;
+    min-width: 200px;
 }
 
 button{
@@ -31,11 +51,21 @@ button{
     font-weight: 400;
     background: transparent;
     border: none;
+    transition-duration: 1s;
+}
+
+button:hover{
+    font-size: 125%;
+
 }
 
 .link_config {
     text-decoration: none;
     color: #fdfdd7;
+}
+
+.link_config:hover{
+    color: #dbdbaa;
 }
 
 .wrapper {
@@ -45,20 +75,17 @@ button{
     padding: 30px 40px;
     margin: 0 auto;
     max-width: 1400px;
+    display: flex;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav .nav-img {
-    width: 5.5%;
-    height: 5.5%;
-}
-
 nav h1 {
-    font-size: 120%;
+    font-size: 140%;
     color: #fdfdd7;
     font-family: sans-serif;
     font-weight:500;
@@ -69,9 +96,298 @@ nav .container-navigation{
     gap: 50px;
 }
 
+@media (max-width: 768px) {
+    .logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
 
-main{
-  flex: 1;
+header {
+    border-bottom: black solid 0px;
+    /*background-color: #322E23;*/
+    z-index: 50;
+    max-width: 1vw;
+}
+
+button{
+    font-size: 110%;
+    font-weight: 400;
+    background: transparent;
+    border: none;
+    transition-duration: 1s;
+}
+
+button:hover{
+    font-size: 125%;
+
+}
+
+.link_config {
+    text-decoration: none;
+    color: #fdfdd7;
+}
+
+.link_config:hover{
+    color: #dbdbaa;
+}
+
+.wrapper {
+    /*padding: 23px 16px;
+    margin: 0 auto;
+    max-width: 1400px;*/
+    padding: 30px 40px;
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 140%;
+    color: #fdfdd7;
+    font-family: sans-serif;
+    font-weight:500;
+}
+
+nav .container-navigation{
+    display: flex;
+    gap: 50px;
+}
+    
+}
+
+
+
+main {
+    flex: 1;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+.background-image {
+    background-image: url('/Team Portfolio Website/pics/Background_image.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.main-content-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10;
+}
+
+
+.profile-photo {
+    border-radius: 25%;
+    cursor: pointer;
+    transition-duration: 1s;
+    width: 40%;
+    max-width: 300px;
+    height: auto;
+}
+
+.profile-photo:hover {
+    border-radius: 15%;
+    transform: scale(0.85);
+}
+
+
+.bio {
+    max-width: 1000px;
+    color: azure;
+    text-align: right;
+}
+
+.bio span {
+    color: #dbdbaa;
+}
+
+.bio h1 {
+    font-size: 65px;
+    transition-duration: 2s;
+}
+
+.bio h1:hover{
+    font-size: 90px;
+    color: transparent;
+}
+
+.bio h3 {
+    font-size: 22px;
+}
+
+.bio p {
+    color: aliceblue;
+    font-size: 15px;
+    line-height: 1.5;
+    transition-duration: 2s;
+}
+
+.bio p:hover{
+    font-size: 17px;
+    word-spacing: 7px;
+
+}
+
+.bio .hire-button {
+    text-decoration: none;
+    background-color: #dbdbaa;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 6px 14px;
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.bio .hire-button:hover {
+    font-size: 17px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.list-container{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 10;
+}
+
+
+@media (max-width: 768px) {
+    .main-content-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .bio {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .bio h1 {
+        font-size: 40px;
+    }
+
+    .bio h3 {
+        font-size: 18px;
+    }
+
+    .bio p {
+        font-size: 14px;
+    }
+
+    .bio .hire-button {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+    .list-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+}
+}
+
+
+footer {
+  background-color: #1a1a1a82;
+  color: #fff;
   width: 100%;
-  min-height: 100vh;
+  padding: 40px 20px;
+  z-index: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+  gap: 20px;
+}
+
+footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+footer .logo img {
+  width: 100px;
+  height: auto;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin: 5px 0;
+}
+
+footer .fa-brands:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  footer .wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .contact, footer .socials, footer .links {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  footer .logo {
+    margin-bottom: 20px;
+  }
 }
