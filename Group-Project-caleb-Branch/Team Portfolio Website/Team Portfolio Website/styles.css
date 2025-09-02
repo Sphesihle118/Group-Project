@@ -1,15 +1,13 @@
-
-
 body {
     font-family: "Arial", sans-serif;
-    background-image: url("bg-img.png");
+    background-image: url("/Group-Project-caleb-Branch/Team Portfolio Website/Team Portfolio Website/bg-img.png");
     color: white;
-    min-height: 100px;
-    margin: 0;
-    
+    height: 100%;
 }
 main {
     flex: 1;
+    overflow: auto;
+    padding-bottom: 100px;
 }
 .btn {
     position: absolute;
@@ -49,12 +47,12 @@ main {
 .navbar .nav-links a:hover {
     transform: scale(1.05);
     transition: transform 0.5s ease;
-    color: #d6d660;
-} 
+}*/
 
 .meetme {
     font-family: Arial, sans-serif;
     font-size: 20px;
+    min-height: 100%;
 }
 
 h1 {
@@ -114,18 +112,18 @@ span {
 } 
 
 
-
-
 footer {
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: -800px;
     width: 100%;
+    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 15px;
     text-align: left;
     padding: 10px 0;
+    
 }
 
 .logo img {
@@ -284,6 +282,4 @@ span {
     margin-bottom: 70px;
     margin-left: 1px;
   } 
- }  
-
-
+ }

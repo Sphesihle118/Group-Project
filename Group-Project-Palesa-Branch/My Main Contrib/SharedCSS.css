@@ -30,6 +30,7 @@ main{
     height: 100;     
     padding: 20px; 
     cursor: pointer;
+    border-radius: 30px;
   }
 
   img {
